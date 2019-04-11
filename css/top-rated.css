@@ -1,0 +1,38 @@
+header {
+     background-image: linear-gradient(57deg, #00F260 0%, #0575E6 100%);
+}
+ ::selection {
+     background: #7deddc;
+}
+ ul.topNav li a.activeNav {
+     background: linear-gradient(65deg, #00F260 -25%, #62adf7 100%);
+}
+ ul.topNav li a:hover:not(.activeNav) {
+     color: #7deddc;
+     border-color: #7deddc;
+}
+ .imdb-pos{
+     left: 10px;
+     background: #fff;
+     text-align: center;
+     line-height: 35px;
+     color: #000;
+     width: 35px;
+     height: 35px;
+     border-radius: 50%;
+}
+ .single-poster-holder h2{
+     font-size: 15px;
+}
+ .single-poster-holder p{
+     border: 2px solid;
+     padding: 5px;
+}
+ .single-poster-holder p::before{
+     content: "BoxOffice: ";
+     font-size: 10px;
+}
+ .posters-holder{
+     display: none;
+}
+ 

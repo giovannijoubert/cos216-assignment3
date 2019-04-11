@@ -1,0 +1,239 @@
+ * {
+     box-sizing: border-box;
+}
+ body {
+     background-color: #fff;
+}
+ .light {
+     background-color: #fff;
+}
+ .dark {
+     margin-left: 65px;
+}
+ .calendar {
+     border-radius: 10px;
+     width: 100%;
+     box-shadow: 0px 0px 35px -16px rgba(0, 0, 0, 0.75);
+     font-family: 'Roboto', sans-serif;
+     padding: 0px 30px;
+     color: #363b41;
+     display: inline-block;
+}
+ .calendar_header {
+     border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+}
+ .header_copy {
+     color: #a39d9e;
+     font-size: 20px;
+}
+ .calendar_plan {
+     margin: 20px 0 40px;
+}
+ .cl_plan {
+     width: 100%;
+     height: 140px;
+     background-image: linear-gradient(57deg, #00C6A7 0%, #1E4D92 100%);
+     border-radius: 5px;
+     box-shadow: 0px 0px 52px -18px rgba(0, 0, 0, 0.75);
+     padding: 30px;
+     color: #fff;
+}
+ .cl_copy {
+     font-size: 20px;
+     margin: 20px 0;
+     display: inline-block;
+}
+ .cl_add {
+     display: inline-block;
+     width: 40px;
+     height: 40px;
+     border-radius: 50%;
+     background-color: #fff;
+     cursor: pointer;
+     margin: 0 0 0 65px;
+     color: #c2c2c2;
+     padding: 11px 13px;
+}
+ .calendar_events {
+     color: #a39d9e;
+     max-height: 300px;
+     overflow: scroll;
+}
+ .ce_title {
+     font-size: 14px;
+}
+ .event_item {
+     margin: 18px 0;
+     padding: 5px;
+     cursor: pointer;
+     background: none;
+     border-radius: 5px;
+     display: flex;
+     align-items: center;
+     transition: background 0.4s ease-in-out;
+}
+ .event_item:hover {
+     background: #00C6A7;
+     box-shadow: 0px 0px 52px -18px rgba(0, 0, 0, 0.75);
+}
+ .active_event_item {
+     background: #00C6A7;
+     box-shadow: 0px 0px 52px -18px rgba(0, 0, 0, 0.75);
+}
+ .active_event_item .ei_Title{
+     color: #fff;
+}
+ .active_event_item .ei_Dot {
+     background-color: #fff;
+     color: #00C6A7;
+}
+ .event_item:hover .ei_Dot {
+     background-color: #fff;
+     color: #00C6A7;
+}
+ .event_item:hover, .event_item:hover .ei_Title {
+     color: #fff;
+}
+ .ei_Dot, .ei_Title {
+     display: inline-block;
+     transition: color 0.3s ease-in-out;
+}
+ .ei_Dot {
+     border-radius: 50%;
+     font-size: 8px;
+     background: #00C6A7;
+     text-align: center;
+     line-height: 20px;
+     width: 20px;
+     height: 20px;
+     color: #fff;
+     box-shadow: 0px 0px 52px -18px rgba(0, 0, 0, 0.75);
+}
+ .dot_active {
+     background-color: #00C6A7;
+}
+ .ei_Title {
+     margin-left: 10px;
+     color: #363b41;
+     max-width: 270px;
+}
+ .dark {
+     background-image: linear-gradient(-222deg, #646464, #454545);
+     color: #fff;
+}
+ .dark .header_title, .dark .ei_Title, .dark .ce_title {
+     color: #fff;
+}
+ .column {
+     float: left;
+     width: 50%;
+}
+ .left{
+     width: 40%;
+}
+ .right{
+     padding-left: 20px;
+     width: 60%;
+     padding-top: 10px;
+}
+ .row{
+     padding: 7%;
+}
+ .row:after {
+     content: "";
+     display: table;
+     clear: both;
+}
+ @media (max-width: 750px) {
+     .column {
+         width: 100%;
+    }
+}
+ @media (max-width: 600px) {
+     .row {
+         padding-top: 170px;
+    }
+}
+ .movie_title{
+     color: #363b41;
+}
+ .youtube{
+     border: 0px;
+     width: 100%;
+     min-height: 360px;
+}
+ .movie_desc{
+     padding-top: 20px;
+     max-width: 100%;
+}
+ .movie_release{
+     float: right;
+}
+ .single-poster-age-rating{
+     width: 80px;
+     text-align: center;
+     border: solid 2px;
+     padding: 3px;
+}
+ #prev {
+     float: left;
+}
+ #next {
+     float: right;
+}
+ #today{
+}
+ #cal_nav{
+     font-size:13px;
+     cursor: pointer;
+     text-align: center;
+}
+ .spesific_date{
+     padding-top: 10px;
+     font-size: 12px;
+}
+ .right-desc{
+     display: none;
+}
+ .right-desc-loader{
+     height: 100%;
+}
+ .right-desc-loader img{
+     display:block;
+     vertical-align: middle;
+     width: 80%;
+     margin:auto;
+}
+ .calendar_events{
+     display: none;
+}
+ .ce_loader img{
+     width: 100px;
+     vertical-align: middle;
+     margin:auto;
+     display:block;
+}
+ #DownloadCal{
+     color: #00C6A7!important;
+     margin-top: 15px;
+     height: 40px;
+     background-color: white;
+     color: black;
+     border-radius: 10px;
+     border: 2px solid #00C6A7;
+     transition: all 1s;
+     cursor: pointer;
+}
+ .DisableDownload {
+     pointer-events: none;
+     cursor: default;
+     opacity: 0.2!important;
+}
+ #DownloadCal:hover {
+     color: #fff!important;
+     background-color: #00C6A7;
+}
+ 
+.calendar_events::-webkit-scrollbar{
+    display: none;
+}

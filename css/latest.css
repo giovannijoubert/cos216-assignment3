@@ -1,0 +1,99 @@
+header {
+     background-image: linear-gradient(57deg, #ee0979 0%, #ff6a00 100%);
+}
+ ::selection {
+     background: #ffa566;
+}
+ ul.topNav li a.activeNav {
+     background: linear-gradient(65deg, #f47a22 -25%, #fc3a98 100%);
+}
+ ul.topNav li a:hover:not(.activeNav) {
+     color: #ffa566;
+     border-color: #ffa566;
+}
+ .single-poster-holder h1{
+     margin-top: 40%;
+}
+ .trailer-button{
+     border: 2px solid;
+     padding: 10px;
+     width: 50%;
+     margin: 30% auto;
+}
+ a {
+     color: #fff;
+}
+ .overlay {
+     position: fixed;
+     top: 0;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     background: rgba(0, 0, 0, 0.7);
+     transition: opacity 500ms;
+     visibility: hidden;
+     opacity: 0;
+}
+ .overlay:target {
+     visibility: visible;
+     opacity: 1;
+}
+ .popup {
+     margin: 70px auto;
+     padding: 10px;
+     background: #fff;
+     border: double 1px transparent;
+     border-radius: 5px;
+     background-image: linear-gradient(white, white), radial-gradient(circle at top left, #ee0979,#ff6a00);
+     background-origin: border-box;
+     background-clip: content-box, border-box;
+     width: 50%;
+     min-width: 300px;
+     position: relative;
+     transition: opacity 0.5s ease-in-out;
+}
+ .popup h1{
+     margin-top: 30px;
+     background: -webkit-linear-gradient(#ee0979,#ff6a00);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+}
+ .popup .close {
+     position: absolute;
+     top: 20px;
+     right: 30px;
+     transition: all 200ms;
+     font-size: 30px;
+     font-weight: bold;
+     text-decoration: none;
+     color: #333;
+}
+ .popup .close:hover {
+     color: #ee0979;
+}
+ .popup .content {
+     max-height: 30%;
+     overflow: auto;
+}
+ .youtube-popup{
+     position: relative;
+     width: 100%;
+     padding-bottom: 56.25%;
+     height: 0;
+}
+ .youtube-popup embed{
+     position: absolute;
+     top:0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+}
+ #loader{
+     -webkit-filter: hue-rotate(160deg);
+     filter: hue-rotate(160deg);
+}
+
+.posters-holder{
+    display: none;
+}
+ 

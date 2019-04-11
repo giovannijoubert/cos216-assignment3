@@ -1,0 +1,220 @@
+header {
+     background-image: linear-gradient(57deg, #3494E6 0%, #EC6EAD 100%);
+}
+ ::selection {
+     background: #7deddc;
+}
+ ul.topNav li a.activeNav {
+     background: linear-gradient(65deg, #3494E6 -25%, #7deddc 100%);
+}
+ ul.topNav li a:hover:not(.activeNav) {
+     color: #7deddc;
+     border-color: #7deddc;
+}
+ .body-elements{
+     padding: 50px;
+}
+/*search*/
+ .filter-container{
+     text-align: center;
+}
+ .search-icon{
+     color: #c682ff;
+}
+ .search-bar{
+     width: 200px;
+     height: 30px;
+     border: double 1px transparent;
+     border-radius: 5px;
+     background-image: linear-gradient(white, white), radial-gradient(circle at top left, #3494E6,#7deddc);
+     background-origin: border-box;
+     background-clip: content-box, border-box;
+     margin-right: 10px;
+}
+ .filter-rating {
+     padding-left: 20px;
+     height: 20px;
+     color: #555;
+     display: inline-block;
+}
+ .filter-rating > label {
+     padding-right: 10px;
+}
+ .filter-genre {
+     height: 20px;
+     border-radius: 5px;
+     overflow: hidden;
+     background: url("../img/drop-down-arrow.svg") no-repeat 90% 50%, linear-gradient(65deg, #3494E6 -25%, #7deddc 100%);
+     background-size: 10px, cover;
+     position: relative;
+     margin-left: 20px;
+     padding: 10px;
+}
+ .filter-genre select {
+     padding: 5px 8px;
+     width: 150px;
+     border: none;
+     box-shadow: none;
+     background: transparent;
+     background-image: none;
+     -webkit-appearance: none;
+     color: #fff;
+}
+ .filter-genre option {
+     color: #777;
+}
+ .filter-genre select:focus {
+     outline: none;
+}
+/*RESPONSIVE*/
+ @media screen and (max-width: 670px) {
+     .filter-container{
+         margin-top: 50px;
+    }
+     .search-bar{
+         margin-top: 5px;
+    }
+     .filter-rating{
+         margin-bottom: 20px;
+    }
+     .welcome-msg{
+         display: none;
+    }
+     .single-poster-holder h1 {
+         font-size: 18px!important;
+    }
+     .single-poster-holder .single-poster-layer_top {
+         padding: 20px!important;
+    }
+}
+ @media screen and (max-width: 770px){
+     .search-bar{
+         margin-bottom: 15px;
+    }
+}
+ .posters-holder{
+     margin: 0 auto;
+     overflow-y: scroll;
+     overflow-x: hidden;
+     padding: 30px;
+     width: 80%;
+     text-align: center;
+     min-height: 490px;
+}
+ .posters-holder::-webkit-scrollbar {
+     display: none;
+}
+ .posters-holder img{
+     border-radius: 10px;
+}
+ .single-poster-holder, .single-poster-holder * {
+     box-sizing: border-box;
+}
+ .single-poster-holder {
+     margin-left: 2px;
+     position: relative;
+     display: inline-block;
+     overflow: hidden;
+     width: 335px;
+     height: 490px;
+     border-radius: 10px;
+}
+ .single-poster-holder img {
+     object-fit: cover;
+     width: 335px;
+     height: 490px;
+}
+ .single-poster-holder .single-poster-layer_bottom {
+     display: block;
+}
+ .single-poster-holder .single-poster-layer_top {
+     border-radius: 10px;
+     opacity: 0;
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     width: 100%;
+     height: 100%;
+     background: rgba(0, 0, 0, 0.6);
+     color: #fff;
+     padding: 40px;
+     -moz-transition: opacity 0.4s ease-in-out 0s;
+     -webkit-transition: opacity 0.4s ease-in-out 0s;
+     -ms-transition: opacity 0.4s ease-in-out 0s;
+     transition: opacity 0.4s ease-in-out 0s;
+}
+ .single-poster-holder:hover .single-poster-layer_top, .single-poster-holder.active .single-poster-layer_top {
+     opacity: 1;
+}
+ .single-poster-holder p {
+     text-align: center;
+     font-size: 16px;
+     display: inline-block;
+     position: absolute;
+     top: 67%;
+     left: 50%;
+     -moz-transform: translate(-50%, -50%);
+     -webkit-transform: translate(-50%, -50%);
+     -ms-transform: translate(-50%, -50%);
+     transform: translate(-50%, -50%);
+}
+ .single-poster-holder .hvrbox-text_mobile {
+     font-size: 15px;
+     border-top: 1px solid rgb(179, 179, 179);
+    /* for old browsers */
+     border-top: 1px solid rgba(179, 179, 179, 0.7);
+     margin-top: 5px;
+     padding-top: 2px;
+     display: none;
+}
+ .single-poster-holder.active .hvrbox-text_mobile {
+     display: block;
+}
+ .single-poster-holder h1{
+     font-size: 20px;
+}
+ .single-poster-holder h2{
+     font-size: 10px;
+}
+ .single-poster-age-rating{
+     width: 20%;
+     margin: 10px auto;
+     border: solid 2px;
+     padding: 3px;
+}
+ .rate{
+     align-content: center;
+}
+ .rate:not(:checked) > input {
+     position:absolute;
+     visibility: hidden;
+}
+ .rate:not(:checked) > label {
+     float:right;
+     width:1em;
+     overflow:hidden;
+     white-space:nowrap;
+     cursor:pointer;
+     font-size:20px;
+     color:#ccc;
+}
+ .rate:not(:checked) > label:before {
+     content: '★ ';
+}
+ .rate > input:checked ~ label {
+     color: #7deddc;
+}
+ .rate:not(:checked) > label:hover, .rate:not(:checked) > label:hover ~ label {
+     color: #EC6EAD;
+}
+ .rate > input:checked + label:hover, .rate > input:checked + label:hover ~ label, .rate > input:checked ~ label:hover, .rate > input:checked ~ label:hover ~ label, .rate > label:hover ~ input:checked ~ label {
+     color: #EC6EAD;
+}
+ #clearfilters{
+     font-size: 12px;
+     color: #888;
+     font-style: italic;
+     cursor: pointer;
+}

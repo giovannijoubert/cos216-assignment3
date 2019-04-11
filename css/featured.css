@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css?family=Lekton:700');
+ header {
+     background-image: linear-gradient(57deg, #C33764 0%, #1D2671 100%);
+}
+ ::selection {
+     background: #C33764;
+}
+ ul.topNav li a.activeNav {
+     background: linear-gradient(65deg, #4551bc -25%, #d14270 100%);
+}
+ ul.topNav li a:hover:not(.activeNav) {
+     color: #ff82a9;
+     border-color: #ff82a9;
+}
+ #posters-responsive {
+     line-height: 0;
+     -webkit-column-count: 4;
+     -webkit-column-gap: 0px;
+     -moz-column-count: 4;
+     -moz-column-gap: 0px;
+     column-count: 4;
+     column-gap: 0px;
+}
+ #posters-responsive img {
+     width: 100%;
+     height: auto;
+}
+ @media (max-width: 1200px) {
+     #posters-responsive {
+         -moz-column-count: 4;
+         -webkit-column-count: 4;
+         column-count: 4;
+    }
+}
+ @media (max-width: 1000px) {
+     #posters-responsive {
+         -moz-column-count: 3;
+         -webkit-column-count: 3;
+         column-count: 3;
+    }
+}
+ @media (max-width: 800px) {
+     #posters-responsive {
+         -moz-column-count: 2;
+         -webkit-column-count: 2;
+         column-count: 2;
+    }
+}
+ @media (max-width: 400px) {
+     .right-poster {
+         text-align: right;
+    }
+     #posters-responsive {
+         -moz-column-count: 1;
+         -webkit-column-count: 1;
+         column-count: 1;
+    }
+}
+/*responsive*/
+ @media screen and (max-width: 670px) {
+     .welcome-msg {
+         display: none;
+    }
+}
+ .posters-holder::-webkit-scrollbar {
+     display: none;
+}
+ .posters-holder {
+     -webkit-backface-visibility: hidden;
+}
+ .single-poster-holder, .single-poster-holder * {
+     box-sizing: border-box;
+}
+ .single-poster-holder {
+     position: relative;
+     display: inline-flex;
+     overflow: hidden;
+     vertical-align: bottom;
+     max-height: 480px;
+     width: 100%;
+     z-index: 0;
+     transition: all 0.5s;
+}
+ .right-poster {
+     float: right;
+}
+ .single-poster-holder:hover {
+     z-index: 9999;
+     width: 199.999%;
+     transition: all 1.2s 
+}
+ .single-poster-holder img {
+     object-fit: cover;
+}
+ .single-poster-holder .single-poster-layer_bottom {
+     display: block;
+}
+ .single-poster-holder .single-poster-layer_top {
+     opacity: 0;
+     position: absolute;
+     top: 0%;
+     left: 0%;
+     right: 0%;
+     bottom: 0%;
+     width: 100%;
+     height: 100%;
+     background: rgba(0, 0, 0, 0.3);
+     color: #fff;
+     transition: all 0.6s ease-in-out 0s;
+}
+ .single-poster-holder:hover .single-poster-layer_top, .single-poster-holder.active .single-poster-layer_top {
+     opacity: 1;
+}
+ .single-poster-holder:hover .single-poster-layer_bottom {
+     height: 40px;
+}
+ .single-poster-age-rating {
+     margin-left: 50px;
+     width: 60px;
+     border: solid 2px;
+     padding: 5px;
+     font-size: 15px;
+     line-height: 25px;
+     text-align: center;
+}
+ .single-poster-holder h3 {
+     margin-left: 50px;
+     margin-top: 40px;
+     font-size: 20px;
+}
+ .single-poster-holder h1 {
+     font-family: 'Lekton', serif;
+     margin-left: 50px;
+     margin-top: 30%;
+     font-size: 25px;
+     line-height: 25px;
+}
+ .single-poster-holder h3::after {
+     content: " IMDB";
+     font-size: 8px;
+}
+ .fanart-horizontal-image {
+     object-fit: cover;
+     min-height: 480px;
+}
+ .disabledHover {
+     pointer-events: none;
+}
